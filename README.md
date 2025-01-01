@@ -11,3 +11,6 @@ Career Navigator through NEP is a data-driven platform guiding students, especia
 - **Frontend** :HTML,CSS
 - **Framework**:Flask
 - **Algorithm**:Random Forest
+
+# Inteface
+![NEP](https://github.com/aishwaryakatare/NEP-Career-Navigator/blob/efdf688e7562527590038f58bb7c0cd4acf83177/static/Screenshot%20(116).png)
