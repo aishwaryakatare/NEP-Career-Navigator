@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Prediction</title>
+    <link rel="stylesheet" href="../static/style1.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Career Prediction System</h1>
+        <p>Discover your ideal career path based on your skills and preferences</p>
+    </header>
+
+    <div class="container">
+        <h2>Level Your Skills</h2>
+        <form action="/science_predict" method="post">
+            <div class="form-group">
+                <label for="Experiment Comfort">Experiment Comfort:</label>
+                <select name="Experiment Comfort" id="Experiment Comfort" required>
+                    <option value="Basic">Basic</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Very Basic">Very Basic</option>
+                    <option value="VeryIntermediate">Very Intermediate</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Problem Solving">Problem Solving:</label>
+                <select name="Problem Solving" id="Problem Solving" required>
+                    <option value="Basic">Basic</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="VeryIntermediate">Very Intermediate</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Math Comfort">Math Comfort:</label>
+                <select name="Math Comfort" id="Math Comfort" required>
+                    <option value="Basic">Basic</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="VeryIntermediate">Very Intermediate</option>
+                    <option value="nan">Not Applicable</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Tech Interest">Tech Interest:</label>
+                <select name="Tech Interest" id="Tech Interest" required>
+                    <option value="Basic">Basic</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="VeryIntermediate">Very Intermediate</option>
+                    <option value="nan">Not Applicable</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Field vs. Lab">Field vs. Lab:</label>
+                <select name="Field vs. Lab" id="Field vs. Lab" required>
+                    <option value="Field">Field</option>
+                    <option value="Lab">Lab</option>
+                    <option value="Both">Both</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Long-Term Projects">Long-Term Projects:</label>
+                <select name="Long-Term Projects" id="Long-Term Projects" required>
+                    <option value="Basic">Basic</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="VeryIntermediate">Very Intermediate</option>
+                    <option value="Very Basic">Very Basic</option>
+                    <option value="nan">Not Applicable</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Attention to Detail">Attention to Detail:</label>
+                <select name="Attention to Detail" id="Attention to Detail" required>
+                    <option value="Basic">Basic</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="VeryIntermediate">Very Intermediate</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Real-World Applications">Real-World Applications:</label>
+                <select name="Real-World Applications" id="Real-World Applications" required>
+                    <option value="Basic">Basic</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Very Basic">Very Basic</option>
+                    <option value="VeryIntermediate">Very Intermediate</option>
+                    <option value="Intermediately Basic">Intermediately Basic</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Work Style">Work Style:</label>
+                <select name="Work Style" id="Work Style" required>
+                    <option value="Independent">Independent</option>
+                    <option value="Teamwork">Teamwork</option>
+                    <option value="Collaborative">Collaborative</option>
+                    <option value="Both">Both</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Adaptability">Adaptability:</label>
+                <select name="Adaptability" id="Adaptability" required>
+                    <option value="Basic">Basic</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="VeryIntermediate">Very Intermediate</option>
+                    <option value="nan">Not Applicable</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Interest in Reading">Interest in Reading:</label>
+                <select name="Interest in Reading" id="Interest in Reading" required>
+                    <option value="Basic">Basic</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                    <option value="Very Basic">Very Basic</option>
+                    <option value="nan">Not Applicable</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Creativity">Creativity:</label>
+                <select name="Creativity" id="Creativity" required>
+                    <option value="Basic">Basic</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                    <option value="nan">Not Applicable</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Patient Interaction">Patient Interaction:</label>
+                <select name="Patient Interaction" id="Patient Interaction" required>
+                    <option value="Basic">Basic</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="VeryIntermediate">Very Intermediate</option>
+                    <option value="nan">Not Applicable</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Design Interest">Design Interest:</label>
+                <select name="Design Interest" id="Design Interest" required>
+                    <option value="Basic">Basic</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="VeryIntermediate">Very Intermediate</option>
+                    <option value="nan">Not Applicable</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Technical Comfort">Technical Comfort:</label>
+                <select name="Technical Comfort" id="Technical Comfort" required>
+                    <option value="Basic">Basic</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="VeryIntermediate">Very Intermediate</option>
+                    <option value="nan">Not Applicable</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Bio/Chem Interest">Bio/Chem Interest:</label>
+                <select name="Bio/Chem Interest" id="Bio/Chem Interest" required>
+                    <option value="Basic">Basic</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="VeryIntermediate">Very Intermediate</option>
+                    <option value="Very Basic">Very Basic</option>
+                    <option value="nan">Not Applicable</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Earth/Space Interest">Earth/Space Interest:</label>
+                <select name="Earth/Space Interest" id="Earth/Space Interest" required>
+                    <option value="Basic">Basic</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="VeryIntermediate">Very Intermediate</option>
+                    <option value="nan">Not Applicable</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Environmental Interest">Environmental Interest:</label>
+                <select name="Environmental Interest" id="Environmental Interest" required>
+                    <option value="Basic">Basic</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="VeryIntermediate">Very Intermediate</option>
+                    <option value="Very Basic">Very Basic</option>
+                    <option value="nan">Not Applicable</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Human Behavior">Human Behavior:</label>
+                <select name="Human Behavior" id="Human Behavior" required>
+                    <option value="Basic">Basic</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="VeryIntermediate">Very Intermediate</option>
+                    <option value="nan">Not Applicable</option>
+                </select>
+            </div>
+            <button type="submit">Predict Career</button>
+        </form>
+    </div>
+</body>
+</html>

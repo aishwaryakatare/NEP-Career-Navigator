@@ -1,0 +1,327 @@
+/* Universal Box Model Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9ecef; /* Neutral Gray Background */
+    color: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(145deg, #dfe4ea, #f7f9fb); /* Subtle Gradient */
+    padding: 30px;
+    text-align: center;
+    flex-direction: column;
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 3em;
+    font-weight: 700;
+    color: #3a3f50;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+form {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 60%; /* Reduced form width */
+    max-width: 800px; /* Reduced max width */
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect on Form */
+form:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Question Styling */
+.question {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+/* Question Title Styling */
+.question h2 {
+    font-size: 1.2em;
+    color: #343a40;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Dropdown Styling */
+.options select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    color: #495057;
+    transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+/* Focus Styling for Dropdown */
+.options select:focus {
+    border-color: #6c757d;
+    background-color: #e9ecef;
+    outline: none;
+}
+
+/* Submit Button Styling */
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(108, 117, 125, 0.2);
+}
+
+/* Hover Effect for Submit Button */
+button:hover {
+    background-color: #495057;
+    transform: translateY(-4px);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    form {
+        padding: 20px;
+        width: 90%; /* Adjust width on smaller screens */
+    }
+
+    .question h2 {
+        font-size: 1em;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 12px;
+    }
+}
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #f1f3f5, #e9ecef); /* Moderate theme gradient */
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin: 20px 0;
+    animation: fadeDown 1.5s ease-out;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #495057; /* Subtle Dark Gray */
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Main Content Styling */
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Form Styling */
+form {
+    background: #ffffff; /* Neutral background for form */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 60%; /* Reduced form width */
+    max-width: 800px; /* Reduced max width */
+    animation: popUp 1.5s ease-out;
+}
+
+form h2 {
+    color: #495057; /* Subtle Dark Gray */
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* Label Styling */
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Input Styling */
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #f8f9fa;
+    color: #495057;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+input[type="number"]:focus {
+    border-color: #6c757d;
+    box-shadow: 0 0 8px rgba(108, 117, 125, 0.5);
+}
+
+/* Select Dropdown Styling */
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #f8f9fa;
+    color: #495057;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+select:focus {
+    border-color: #6c757d;
+    box-shadow: 0 0 8px rgba(108, 117, 125, 0.5);
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background: #6c757d; /* Moderate gray */
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+button:hover {
+    background: #5a6268;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(1);
+}
+
+/* Animations */
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popUp {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    form h2 {
+        font-size: 1.2rem;
+    }
+
+    input[type="number"],
+    select {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+}

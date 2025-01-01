@@ -1,0 +1,215 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #465a85;
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+.navbar .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar .logo span {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar nav {
+    display: flex;
+    margin-right: 40px;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1em;
+}
+
+.navbar nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    padding: 20px;
+    gap: 20px;
+    overflow-x: auto;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    width: 250px; /* Reduced size */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 0 0 auto;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+    height: 150px; /* Reduced size */
+}
+
+.card h3 {
+    color: #444;
+    font-size: 1.2em; /* Reduced size */
+    margin: 10px 0 8px;
+}
+
+.card p {
+    color: #555;
+    font-size: 0.9em; /* Reduced size */
+    margin: 0 0 10px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.redirect-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 8px 16px; /* Reduced size */
+    font-size: 1em; /* Reduced size */
+    color: white;
+    background-color: #465a85;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.redirect-btn:hover {
+    background-color: #3b4a70;
+}
+
+footer {
+    background: #465a85;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        width: 200px; /* Further reduced for medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .logo span {
+        font-size: 1.2em;
+    }
+
+    .navbar nav a {
+        font-size: 0.9em;
+        margin: 0 10px;
+    }
+
+    .card {
+        width: 180px; /* Further reduced for small screens */
+    }
+
+    .card img {
+        height: 120px; /* Reduced size for small screens */
+    }
+}
+
+/* Basic dropdown styles */
+/* Basic dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black !important; /* Apply font color with !important */
+    padding: 10px 13px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show the dropdown content when hovering */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Nested dropdown */
+.nested-dropdown {
+    position: relative;
+}
+
+.nested-dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%; /* Position the nested menu to the right of the parent */
+    top: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.nested-dropdown:hover .nested-dropdown-content {
+    display: block;
+}
+
+.nested-dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: black !important; /* Apply font color with !important */
+}
+
+.nested-dropdown-content a:hover {
+    background-color: #f1f1f1;
+}

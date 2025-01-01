@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Prediction</title>
+    <link rel="stylesheet" href="/static/prediction.css">
+    
+</head>
+<body>
+    <h1>Your predicted field is: {{ field }}</h1>
+    <p>For predicting Occupation Click below:</p>
+    <ul>
+        <li><a href="{{ url_for(field.lower() + '_predict') }}">See {{ field }} Career Details</a></li>
+    </ul>
+</body>
+</html>

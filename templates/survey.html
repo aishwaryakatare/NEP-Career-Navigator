@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            color: #333;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            overflow: auto; /* Prevent content cut off */
+        }
+
+        /* Survey Form Styling */
+        .survey-form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            overflow: auto; /* Allow the form to scroll if necessary */
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #4C6A92;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            color: #4C6A92;
+            margin-bottom: 10px;
+        }
+
+        /* Styling for the Select Dropdown */
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            background-color: #f9f9f9;
+            color: #555;
+            transition: border-color 0.3s ease;
+        }
+
+        select:focus {
+            border-color: #4C6A92;
+            outline: none;
+        }
+
+        /* Button Styling */
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.2rem;
+            background-color: #4C6A92;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #3e5d7e;
+        }
+
+        /* Ensure smooth scrolling and content visibility on smaller screens */
+        .survey-form {
+            overflow-y: auto;
+            max-height: 80vh; /* Ensures the form doesn't exceed screen height */
+        }
+
+        /* Responsive Design for Smaller Screens */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .survey-form {
+                padding: 20px;
+                width: 90%;
+                max-height: 90vh; /* Allow more vertical space on smaller screens */
+            }
+
+            select, button {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="survey-form">
+        <h1>Survey</h1>
+        
+        <form method="POST">
+            {% for question in questions %}
+                <div>
+                    <h3>{{ question['question'] }}</h3>
+                    <select name="answer_{{ loop.index0 }}" required>
+                        <option value="" disabled selected>Select an answer</option>
+                        {% for option in question['options'] %}
+                            <option value="{{ option }}">{{ option }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            {% endfor %}
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>

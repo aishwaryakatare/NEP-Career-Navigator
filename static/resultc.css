@@ -1,0 +1,129 @@
+/* General Body Styling */
+body {
+    background-color: #f2f4f8; /* Light background color for a clean look */
+    font-family: 'Arial', sans-serif; /* Simple, easy-to-read font */
+    color: #333; /* Dark text for good readability */
+    margin: 0;
+    padding: 0;
+}
+
+/* Result Container Styling */
+.result-container {
+    text-align: center;
+    padding: 40px;
+    background-color: #fff;
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for the result container */
+.result-container:hover {
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 3em;
+    color: #526084;
+    margin-bottom: 20px;
+    font-weight: 600; /* Stronger font weight for emphasis */
+}
+
+/* Result Text Styling */
+p {
+    font-size: 1.2em;
+    color: #fffefe;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Result Box Styling */
+.result-box {
+    background-color: #343c53; /* Deep blue background */
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+    margin: 30px auto;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for the result box */
+.result-box:hover {
+    background-color: #465a85; /* Darker shade on hover */
+    transform: scale(1.03);
+}
+
+/* Styling for the field name (Career Path) */
+.result-box h2 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+/* Back Button Styling */
+.back-button {
+    display: inline-block;
+    background-color: #6c7b99;
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* Back button hover effect */
+.back-button:hover {
+    background-color: #465a85;
+    transform: translateY(-3px); /* Subtle movement upwards */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .result-container {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .result-box h2 {
+        font-size: 1.8em;
+    }
+
+    .back-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .result-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .result-box h2 {
+        font-size: 1.6em;
+    }
+
+    .back-button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}

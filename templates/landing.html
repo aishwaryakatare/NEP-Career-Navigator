@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI-powered career guidance platform aligned with India's National Education Policy (NEP)">
+    <meta name="keywords" content="Career Guidance, NEP, AI Platform, Education">
+    <title>Career Prediction Platform</title>
+    <link rel="stylesheet" href="../static/Landing.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="static/logo.webp" alt="Website Logo">
+            <span>Career Navigator</span>
+        </div>
+        <nav>
+            <a href="">Home</a>
+            <a href="{{url_for('contact')}}">Contact Us</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">For Students</a>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('survey') }}">After 10th</a>
+                    <div class="nested-dropdown">
+                        <a href="#">After 12th</a>
+                        <div class="nested-dropdown-content">
+                            <a href="{{url_for('science_predict')}}">Science</a>
+                            <a href="{{url_for('commerce_predict')}}">Commerce</a>
+                            <a href="{{url_for('arts_predict')}}">Arts</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="{{ url_for('vision') }}">Vision</a>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <a href="{{url_for('science_predict')}}" style="text-decoration: none; color: inherit;">
+                <img src="static/Science.jpg" alt="Science Career">
+                <h3>Science</h3>
+                <p>Explore cutting-edge technology, research, and discovery in the world of science!</p>
+            </a>
+        </div>
+        <div class="card">
+            <a href="{{url_for('arts_predict')}}" style="text-decoration: none; color: inherit;">
+                <img src="static/Arts.png" alt="Arts Career">
+                <h3>Arts</h3>
+                <p>Discover the world of creativity, culture, and self-expression through arts!</p>
+            </a>
+        </div>
+        <div class="card">
+            <a href="{{url_for('commerce_predict')}}" style="text-decoration: none; color: inherit;">
+                <img src="static/Commerce.jpg" alt="Commerce Career">
+                <h3>Commerce</h3>
+                <p>Learn about business, economics, and financial strategies for success!</p>
+            </a>
+        </div>
+    </div>
+
+    <form action="/survey" method="get" style="text-align: center; margin-top: 20px;">
+        <button class="redirect-btn" type="submit">Start the Survey</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2024 AI Career Guidance Platform. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelector(".dropbtn").addEventListener("click", function() {
+            let dropdownContent = document.querySelector(".dropdown-content");
+            dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+        });
+
+        document.querySelectorAll(".nested-dropdown > a").forEach(function(item) {
+            item.addEventListener("click", function() {
+                let nestedDropdownContent = item.nextElementSibling;
+                nestedDropdownContent.style.display = nestedDropdownContent.style.display === "block" ? "none" : "block";
+            });
+        });
+    </script>
+</body>
+</html>

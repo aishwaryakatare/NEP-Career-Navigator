@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Career Navigator</title>
+    <link rel="stylesheet" href="../static/contact.css"> <!-- Include your CSS here -->
+</head>
+<body>
+    <!-- Header and Navbar -->
+    <header class="header">
+        <h1>Career Navigator</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <!-- Add more links as needed -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Form -->
+    <div class="contact-form-container">
+        <h2>Contact Us</h2>
+        <form action="/submit" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Career Navigator. All rights reserved.</p>
+    </footer>
+</body>
+</html>

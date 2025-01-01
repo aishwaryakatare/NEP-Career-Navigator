@@ -1,0 +1,183 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #f0f0f0, #d9d9d9); /* Light theme gradient */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin: 20px 0;
+    animation: fadeDown 1.5s ease-out;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Main Content Styling */
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Form Styling */
+form {
+    background: #ffffff; /* Light background for form */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 700px;
+    animation: popUp 1.5s ease-out;
+}
+
+form h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* Label Styling */
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+/* Input Styling */
+input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #fafafa;
+    color: #333;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    
+}
+
+input[type="number"]:focus, select:focus {
+    border-color: #807d83;
+    box-shadow: 0 0 8px rgba(152, 144, 163, 0.5);
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background: #646060;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+button:hover {
+    background: #232225;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(1);
+}
+
+/* Animations */
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popUp {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    form {
+        width: 95%;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    form h2 {
+        font-size: 1.2rem;
+    }
+
+    input[type="number"],
+    select {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+}

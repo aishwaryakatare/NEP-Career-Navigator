@@ -1,0 +1,121 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.header {
+    text-align: center;
+    background-color: #08243d;
+    color: white;
+    padding: 20px 0; /* Reduced padding */
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.header h1 {
+    font-size: 2em; /* Adjusted font size */
+    margin: 0;
+}
+
+.header p {
+    font-size: 0.9em; /* Smaller font size */
+    margin-top: 5px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    opacity: 0; /* Start with hidden cards */
+    animation: fadeInUp 1s forwards; /* Apply fade-in effect */
+    animation-delay: 0.5s; /* Delay for the whole card-container */
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+    cursor: pointer;
+    max-width: 280px;
+    height: 180px;
+    opacity: 0; /* Start with hidden card */
+    animation: fadeInUp 0.8s forwards; /* Apply fade-in effect to each card */
+}
+
+/* Staggered animation for each card */
+.card:nth-child(1) {
+    animation-delay: 0.6s;
+}
+
+.card:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.card:nth-child(3) {
+    animation-delay: 1.4s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: #e3f2fd;
+}
+
+.card h3 {
+    background-color: #08243d;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    color: #555;
+}
+
+.center-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1em;
+    color: #777;
+}
+
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Keyframe for fade-in animation */
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

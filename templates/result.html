@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="../static/skill.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Predicted Career</h1>
+        <p class="prediction">Field of Interest: {{ prediction }}</p>
+        
+        <div class="skills">
+            <h3>Skills Required for This Career:</h3>
+            <p><strong>Foundational Skills:</strong> {{ foundational_skills }}</p>
+            <p><strong>Intermediate Skills:</strong> {{ intermediate_skills }}</p>
+            <p><strong>Professional Skills:</strong> {{ professional_skills }}</p>
+        </div>
+
+        <a href="/" class="back-link">Back to Home</a>
+    </div>
+</body>
+</html>

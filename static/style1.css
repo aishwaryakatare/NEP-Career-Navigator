@@ -1,0 +1,196 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f4f9; /* Light background for a balanced theme */
+    color: #333; /* Dark text for good readability */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Start content from the top */
+    min-height: 100vh;
+    padding: 20px;
+    animation: backgroundFade 2s ease-in-out;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Header Styling */
+.header {
+    text-align: center;
+    margin: 20px 0; /* Add margin for spacing */
+  
+}
+
+.header h1 {
+    color: #3a3f50; /* Accent color (purple) for a modern feel */
+    font-size: 2.5rem;
+    animation: slideIn 1s ease-out;
+    margin-bottom: 10px; /* Ensure space between the header and content */
+    text-align: center;
+}
+header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+/* Container Styling */
+.container {
+    background-color: #ffffff; /* Light background for container */
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: scaleUp 1.5s ease-out;
+    margin-bottom: 20px; /* Add spacing from the bottom */
+}
+.container h2{
+    color: #3a3f50;
+    font-size: 25px; 
+    text-align: center;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 15px;
+    animation: fadeUp 1s ease forwards;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color:#3a3f50; /* Accent color for labels */
+    text-align: center;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    text-align: center;
+}
+
+.form-group select:focus {
+    border-color: #847f8a;
+    background-color: #eaeaea;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6c757d; /* Accent color for buttons */
+    color: white; /* White text for contrast */
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    animation: bounce 2s infinite;
+}
+
+button:hover {
+    background-color: #2b2c2c; /* Darker shade of the accent color */
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #6c757d;
+    transform: translateY(0);
+}
+
+/* Animations */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes backgroundFade {
+    0% {
+        background-color: #f4f4f9;
+    }
+    100% {
+        background-color: #ffffff;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .form-group select {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}

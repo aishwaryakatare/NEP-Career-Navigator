@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Occupation Prediction</title>
+    <link rel="stylesheet" href="../static/style3.css">
+</head>
+<body>
+    <header>
+        <h1>Career Prediction System</h1>
+        <p>Discover your ideal career path based on your skills and preferences</p>
+    </header>
+    <main>
+        <form action="/arts_predict" method="POST">
+            <h2>Rate Your Skills(Scale 1-5)</h2>
+            <label for="Social Awareness">Social Awareness (1-5):</label>
+            <input type="number" id="Social Awareness" name="Social Awareness" min="1" max="5" required><br><br>
+
+            <label for="Communication Skills">Communication Skills (1-5):</label>
+            <input type="number" id="Communication Skills" name="Communication Skills" min="1" max="5" required><br><br>
+
+            <label for="Empathy and Counseling Skills">Empathy and Counseling Skills (1-5):</label>
+            <input type="number" id="Empathy and Counseling Skills" name="Empathy and Counseling Skills" min="1" max="5" required><br><br>
+
+            <label for="Critical Thinking">Critical Thinking (1-5):</label>
+            <input type="number" id="Critical Thinking" name="Critical Thinking" min="1" max="5" required><br><br>
+
+            <label for="Cultural Literacy">Cultural Literacy (1-5):</label>
+            <input type="number" id="Cultural Literacy" name="Cultural Literacy" min="1" max="5" required><br><br>
+
+            <label for="Research Skills">Research Skills (1-5):</label>
+            <input type="number" id="Research Skills" name="Research Skills" min="1" max="5" required><br><br>
+
+            <h2>Level Your Skill</h2>
+            <label for="Public Speaking">Public Speaking:</label>
+            <select name="Public Speaking" id="Public Speaking" required>
+                <option value="Medium">Medium</option>
+                <option value="Advanced">Advanced</option>
+                <option value="Basic">Basic</option>
+            </select><br><br>
+
+            <label for="Writing and Editing">Writing and Editing:</label>
+            <select name="Writing and Editing" id="Writing and Editing" required>
+                <option value="Advanced">Advanced</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+                <option value="Basic">Basic</option>
+            </select><br><br>
+
+            <label for="Interpersonal Skills">Interpersonal Skills:</label>
+            <select name="Interpersonal Skills" id="Interpersonal Skills" required>
+                <option value="Advanced">Advanced</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select><br><br>
+
+            <label for="Ethical Judgment">Ethical Judgment:</label>
+            <select name="Ethical Judgment" id="Ethical Judgment" required>
+                <option value="Medium">Medium</option>
+                <option value="Advanced">Advanced</option>
+                <option value="High">High</option>
+                <option value="Basic">Basic</option>
+            </select><br><br>
+
+            <label for="Problem-Solving">Problem-Solving:</label>
+            <select name="Problem-Solving" id="Problem-Solving" required>
+                <option value="Medium">Medium</option>
+                <option value="Advanced">Advanced</option>
+                <option value="High">High</option>
+                <option value="Basic">Basic</option>
+            </select><br><br>
+
+            <label for="Legal Knowledge">Legal Knowledge:</label>
+            <select name="Legal Knowledge" id="Legal Knowledge" required>
+                <option value="Medium">Medium</option>
+                <option value="Advanced">Advanced</option>
+                <option value="High">High</option>
+                <option value="Basic">Basic</option>
+                <option value="nan">None</option>
+            </select><br><br>
+
+            <label for="Analytical Skills">Analytical Skills:</label>
+            <select name="Analytical Skills" id="Analytical Skills" required>
+                <option value="Medium">Medium</option>
+                <option value="Advanced">Advanced</option>
+                <option value="High">High</option>
+                <option value="Basic">Basic</option>
+                <option value="nan">None</option>
+            </select><br><br>
+
+            <label for="Negotiation Skills">Negotiation Skills:</label>
+            <select name="Negotiation Skills" id="Negotiation Skills" required>
+                <option value="Advanced">Advanced</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+                <option value="Basic">Basic</option>
+                <option value="nan">None</option>
+            </select><br><br>
+
+            <label for="Advocacy">Advocacy:</label>
+            <select name="Advocacy" id="Advocacy" required>
+                <option value="Medium">Medium</option>
+                <option value="Advanced">Advanced</option>
+                <option value="High">High</option>
+                <option value="Basic">Basic</option>
+                <option value="nan">None</option>
+            </select><br><br>
+
+            <label for="Strategic Thinking">Strategic Thinking:</label>
+            <select name="Strategic Thinking" id="Strategic Thinking" required>
+                <option value="Advanced">Advanced</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+                <option value="Basic">Basic</option>
+            </select><br><br>
+
+            <label for="Language Proficiency">Language Proficiency:</label>
+            <select name="Language Proficiency" id="Language Proficiency" required>
+                <option value="Medium">Medium</option>
+                <option value="Advanced">Advanced</option>
+                <option value="High">High</option>
+                <option value="Basic">Basic</option>
+                <option value="nan">None</option>
+            </select><br><br>
+
+            <label for="Emotional Intelligence">Emotional Intelligence:</label>
+            <select name="Emotional Intelligence" id="Emotional Intelligence" required>
+                <option value="Advanced">Advanced</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select><br><br>
+
+            <button type="submit">Predict</button>
+        </form>
+    </main>
+</body>
+</html>

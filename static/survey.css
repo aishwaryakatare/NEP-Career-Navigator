@@ -1,0 +1,125 @@
+/* Universal Box Model Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Light Blue Background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(145deg, #ffffff, #e6f2ff); /* Gradient Background */
+    padding: 30px;
+    text-align: center;
+    flex-direction: column;
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 3em;
+    font-weight: 700;
+    color: #383055;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Form Styling */
+form {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect on Form */
+form:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 123, 255, 0.2);
+}
+
+/* Question Styling */
+.question {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+/* Question Title Styling */
+.question h2 {
+    font-size: 1.2em;
+    color: #0c121a;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Dropdown Styling */
+.options select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+/* Focus Styling for Dropdown */
+.options select:focus {
+    border-color: #007bff;
+    background-color: #e6f7ff;
+    outline: none;
+}
+
+/* Submit Button Styling */
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+/* Hover Effect for Submit Button */
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-4px);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .question h2 {
+        font-size: 1em;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 12px;
+    }
+}
