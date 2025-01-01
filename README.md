@@ -6,3 +6,8 @@ Career Navigator through NEP is a data-driven platform guiding students, especia
 - **Occupation Recommendation**
 - **Skill Guidance**
 - **Promoting vocational courses**
+
+# Technologies Used
+- **Frontend** :HTML,CSS
+- **Framework**:Flask
+- **Algorithm**:Random Forest
